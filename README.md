@@ -5,7 +5,7 @@ I'm building an ML service that discovers biomedical content and categorizes it.
 
 ### Setup
 
-### Clusters
+#### Clusters
 
 Now to do distributed ml, I need to have a cluster/group of machines so that I can effortlessly scale the workloads. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one of them is a head node that manages the cluster and it will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
 
@@ -38,11 +38,11 @@ If you're using resources from the cloud computing platforms like AWS, you can d
 
 I'm doing this on my personal laptop and so my laptop will act as a cluster where one CPU will be the head node and some of the remaining CPU will be the worker nodes.
 
-### Workspace
+#### Workspace
 
 I'm using VS Code
 
-### Git
+#### Git
 
 I have created a repository in my GitHub account and cloned it
 
@@ -66,7 +66,7 @@ Now I can launch the jupyter notebook to develop our ML application
 jupyter lab notebooks/emotions.ipynb
 ```
 
-### Ray
+#### Ray
 
 I'm using Ray to scale and productionize our ML application
 
@@ -86,6 +86,49 @@ ray.cluster_resources()
 ```
 
 ### Product
+
+#### Product Design
+
+Background
+
+We're trying to build a product for:
+
+users: healthcare professionals and researchers.
+goals: stay up-to-date on biomedical content for work, knowledge, etc.
+pains: too much unlabeled content scattered around the internet.
+
+Value Proposition
+product: a service that discovers and categorizes biomedical content from popular sources.
+alleviates: display categorized content for users to discover.
+advantages: when users visit our platform to stay up-to-date on biomedical content, they don't waste time searching for that content themselves in the noisy internet.
+
+Objectives
+Discover biomdeical content from trusted sources to bring into our platform.
+Classify incoming content for our users to easily discover. [OUR FOCUS]
+Display categorized content on our platform (recent, popular, recommended, etc.)
+
+Solution
+Develop a model that can classify the content so that it can be organized by category (tag) on our platform.
+
+Core features:
+predict the correct tag for a given content. [OUR FOCUS]
+user feedback process for incorrectly classified content.
+workflows to categorize ML content that our model is incorrect / unsure about.
+
+Integrations:
+ML content from reliable sources will be sent to our service for classification.
+
+Alternatives:
+allow users to add content manually and classify them (noisy, cold start, etc.)
+
+Constraints:
+maintain low latency (>100ms) when classifying incoming content. [Latency]
+only recommend tags from our list of approved tags. [Security]
+avoid duplicate content from being added to the platform. [UI/UX]
+
+Out-of-scope:
+identify relevant tags beyond our approved list of tags (natural-language-processing, computer-vision, mlops and other).
+using full-text HTML from content links to aid in classification.
 
 ### Systems
 
