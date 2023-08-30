@@ -23,8 +23,8 @@ pyenv global 3.10.11 # set default
 Once I have python version, I can create virtual environment to install the dependencies.
 
 ```
-mkdir madewithml 
-cd madewithml 
+mkdir classification 
+cd classification 
 python3 -m venv venv # create virtual environment 
 source venv/bin/activate
 python3 -m pip install --upgrade pip setuptools wheel
@@ -89,47 +89,8 @@ ray.cluster_resources()
 
 #### Product Design
 
-Background
-
-We're trying to build a product for:
-
-users: healthcare professionals and researchers.
-goals: stay up-to-date on biomedical content for work, knowledge, etc.
-pains: too much unlabeled content scattered around the internet.
-
-Value Proposition
-product: a service that discovers and categorizes biomedical content from popular sources.
-alleviates: display categorized content for users to discover.
-advantages: when users visit our platform to stay up-to-date on biomedical content, they don't waste time searching for that content themselves in the noisy internet.
-
-Objectives
-Discover biomdeical content from trusted sources to bring into our platform.
-Classify incoming content for our users to easily discover. [OUR FOCUS]
-Display categorized content on our platform (recent, popular, recommended, etc.)
-
-Solution
-Develop a model that can classify the content so that it can be organized by category (tag) on our platform.
-
-Core features:
-predict the correct tag for a given content. [OUR FOCUS]
-user feedback process for incorrectly classified content.
-workflows to categorize ML content that our model is incorrect / unsure about.
-
-Integrations:
-ML content from reliable sources will be sent to our service for classification.
-
-Alternatives:
-allow users to add content manually and classify them (noisy, cold start, etc.)
-
-Constraints:
-maintain low latency (>100ms) when classifying incoming content. [Latency]
-only recommend tags from our list of approved tags. [Security]
-avoid duplicate content from being added to the platform. [UI/UX]
-
-Out-of-scope:
-identify relevant tags beyond our approved list of tags (natural-language-processing, computer-vision, mlops and other).
-using full-text HTML from content links to aid in classification.
-
 ### Systems
 
 ## Data
+
+## References
