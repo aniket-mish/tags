@@ -3,15 +3,15 @@
 ## Design
 I'm building an ML service that discovers biomedical content and categorizes it. The motivation behind this side project is to learn about distributed ML patterns, MLOps, and LLMs.
 
-### Setup
+1. Setup
 
-#### Clusters
+**Clusters**
 
 Now to do distributed ml, I need to have a cluster/group of machines so that I can effortlessly scale the workloads. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one of them is a head node that manages the cluster and it will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
 
 I'm going to create our cluster by defining a computing configuration and an environment.
 
-#### Environment
+**Environment**
 
 I'm using a mac and python 3.10 here. I'm using `pyenv` to easily switch between python versions.
 
@@ -30,7 +30,7 @@ source venv/bin/activate
 python3 -m pip install --upgrade pip setuptools wheel
 ```
 
-#### Compute
+**Compute**
 
 I can define the compute configuration in the `cluster_compute.yaml`, which will specify the hardware dependencies that I'll need to execute workloads.
 
@@ -38,11 +38,11 @@ If you're using resources from the cloud computing platforms like AWS, you can d
 
 I'm doing this on my personal laptop and so my laptop will act as a cluster where one CPU will be the head node and some of the remaining CPU will be the worker nodes.
 
-#### Workspace
+**Workspace**
 
 I'm using VS Code
 
-#### Git
+**Git**
 
 I have created a repository in my GitHub account and cloned it
 
@@ -66,7 +66,7 @@ Now I can launch the jupyter notebook to develop our ML application
 jupyter lab notebooks/emotions.ipynb
 ```
 
-#### Ray
+**Ray**
 
 I'm using Ray to scale and productionize our ML application
 
@@ -85,12 +85,32 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
-### Product
+2. Product
 
-#### Product Design
+**Product Design**
 
-### Systems
+3. Systems
 
 ## Data
+
+1. Preparation
+
+2. Exploration
+
+3. Preprocessing
+
+4. Distributed
+
+## Model
+
+## Developing
+
+## Utilities
+
+## Testing
+
+## Reproducibility
+
+## Production
 
 ## References
