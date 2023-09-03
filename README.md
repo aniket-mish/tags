@@ -3,7 +3,7 @@
 ## Design
 I'm building an ML service that discovers biomedical content and categorizes it. The motivation behind this side project is to learn about distributed ML patterns, MLOps, and LLMs.
 
-1. Setup
+### Setup
 
 **Clusters**
 
@@ -85,21 +85,21 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
-2. Product
+### Product
 
 **Product Design**
 
-3. Systems
+### Systems
 
 ## Data
 
-1. Preparation
+### Preparation
 
-2. Exploration
+### Exploration
 
-3. Preprocessing
+### Preprocessing
 
-4. Distributed
+### Distributed
 
 ## Model
 
