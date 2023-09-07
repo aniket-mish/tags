@@ -15,14 +15,14 @@ I'm going to create our cluster by defining a computing configuration and an env
 
 I'm using a mac and python 3.10 here. I'm using `pyenv` to easily switch between python versions.
 
-```
+```bash
 pyenv install 3.10.11 # install 
 pyenv global 3.10.11 # set default
 ```
 
 Once I have python version, I can create virtual environment to install the dependencies.
 
-```
+```bash
 mkdir classification 
 cd classification 
 python3 -m venv venv # create virtual environment 
@@ -46,7 +46,7 @@ I'm using VS Code
 
 I have created a repository in my GitHub account and cloned it
 
-```
+```bash
 export GITHUB_USERNAME="aniket-mish"
 git clone https://github.com/aniket-mish/emotions.git . 
 git remote set-url origin https://github.com/$GITHUB_USERNAME/emotions.git 
@@ -56,13 +56,13 @@ export PYTHONPATH=$PYTHONPATH:$PWD
 
 Now I'm going to install python packages that are required and add it to our `requirements.txt` file. You can find the requirements.txt here.
 
-```
+```bash
 python3 -m pip install -r requirements.txt
 ```
 
 Now I can launch the jupyter notebook to develop our ML application
 
-```
+```bash
 jupyter lab notebooks/emotions.ipynb
 ```
 
@@ -70,7 +70,7 @@ jupyter lab notebooks/emotions.ipynb
 
 I'm using Ray to scale and productionize our ML application
 
-```
+```python
 import ray
 
 # Initialize Ray
@@ -81,7 +81,7 @@ ray.init()
 
 I can also view cluster resources
 
-```
+```python
 ray.cluster_resources()
 ```
 
