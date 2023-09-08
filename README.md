@@ -1,9 +1,9 @@
 # Discovery
 
-## Design
+## 1. Design
 I'm building an ML service that discovers biomedical content and categorizes it. The motivation behind this side project is to learn about distributed ML patterns, MLOps, and LLMs.
 
-### Setup
+### a. Setup
 
 **Clusters**
 
@@ -85,32 +85,32 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
-### Product
+### b. Product
 
 **Product Design**
 
-### Systems
+### c. Systems
 
-## Data
+## 2. Data
 
-### Preparation
+### a. Preparation
 
-### Exploration
+### b. Exploration
 
-### Preprocessing
+### c. Preprocessing
 
-### Distributed
+### d. Distributed
 
-## Model
+## 3. Model
 
-## Developing
+## 4. Developing
 
-## Utilities
+## 5. Utilities
 
-## Testing
+## 6. Testing
 
-## Reproducibility
+## 7. Reproducibility
 
-## Production
+## 8. Production
 
-## References
+## 9. References
