@@ -114,3 +114,7 @@ ray.cluster_resources()
 ## 8. Production
 
 ## 9. References
+[1] https://madewithml.com
+[2] https://medium.com/sage-ai/demystifying-the-process-of-building-a-ray-cluster-110c67914a99
+[3] https://medium.com/samsara-engineering/building-a-modern-machine-learning-platform-with-ray-eb0271f9cbcf
+[4] https://maxpumperla.com/learning_ray/
