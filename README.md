@@ -1,17 +1,17 @@
 # Discovery
 
-## 1. Design
+## Design
 I'm building an ML service that discovers biomedical content and categorizes it. The motivation behind this side project is to learn about distributed ML patterns, MLOps, and LLMs.
 
-### a. Setup
+## Setup
 
-**Clusters**
+**_Clusters_**
 
 Now to do distributed ml, I need to have a cluster/group of machines so that I can effortlessly scale the workloads. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one of them is a head node that manages the cluster and it will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
 
 I'm going to create our cluster by defining a computing configuration and an environment.
 
-**Environment**
+**_Environment_**
 
 I'm using a mac and python 3.10 here. I'm using `pyenv` to easily switch between python versions.
 
@@ -30,7 +30,7 @@ source venv/bin/activate
 python3 -m pip install --upgrade pip setuptools wheel
 ```
 
-**Compute**
+**_Compute_**
 
 I can define the compute configuration in the `cluster_compute.yaml`, which will specify the hardware dependencies that I'll need to execute workloads.
 
@@ -38,11 +38,11 @@ If you're using resources from the cloud computing platforms like AWS, you can d
 
 I'm doing this on my personal laptop and so my laptop will act as a cluster where one CPU will be the head node and some of the remaining CPU will be the worker nodes.
 
-**Workspace**
+**_Workspace_**
 
 I'm using VS Code
 
-**Git**
+**_Git_**
 
 I have created a repository in my GitHub account and cloned it
 
@@ -66,7 +66,7 @@ Now I can launch the jupyter notebook to develop our ML application
 jupyter lab notebooks/emotions.ipynb
 ```
 
-**Ray**
+**_Ray_**
 
 I'm using Ray to scale and productionize our ML application
 
@@ -85,35 +85,36 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
-### b. Product
+## Product
 
-**Product Design**
+**_Product Design_**
 
-### c. Systems
+## Systems
 
-## 2. Data
+## Data
 
-### a. Preparation
+## Preparation
 
-### b. Exploration
+## Exploration
 
-### c. Preprocessing
+## Preprocessing
 
-### d. Distributed
+## Distributed
 
-## 3. Model
+## Model
 
-## 4. Developing
+## Developing
 
-## 5. Utilities
+## Utilities
 
-## 6. Testing
+## Testing
 
-## 7. Reproducibility
+## Reproducibility
 
-## 8. Production
+## Production
 
-## 9. References
+## References
+
 [1] https://madewithml.com
 
 [2] https://medium.com/sage-ai/demystifying-the-process-of-building-a-ray-cluster-110c67914a99
@@ -121,3 +122,5 @@ ray.cluster_resources()
 [3] https://medium.com/samsara-engineering/building-a-modern-machine-learning-platform-with-ray-eb0271f9cbcf
 
 [4] https://maxpumperla.com/learning_ray/
+
+[5] https://medium.com/pinterest-engineering/last-mile-data-processing-with-ray-629affbf34ff
