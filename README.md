@@ -48,8 +48,8 @@ I have created a repository in my GitHub account and cloned it
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
-git clone https://github.com/aniket-mish/emotions.git . 
-git remote set-url origin https://github.com/$GITHUB_USERNAME/emotions.git 
+git clone https://github.com/aniket-mish/discovery.git . 
+git remote set-url origin https://github.com/$GITHUB_USERNAME/discovery.git 
 git checkout -b dev 
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
@@ -63,12 +63,12 @@ python3 -m pip install -r requirements.txt
 Now I can launch the jupyter notebook to develop our ML application
 
 ```bash
-jupyter lab notebooks/emotions.ipynb
+jupyter lab notebooks/pubmed.ipynb
 ```
 
 **_Ray_**
 
-I'm using Ray to scale and productionize our ML application
+I'm using Ray to scale and production-ize our ML application
 
 ```python
 import ray
