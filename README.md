@@ -85,10 +85,6 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
-## Product
-
-**_Product Design_**
-
 ## Systems
 
 ## Data
@@ -96,14 +92,6 @@ ray.cluster_resources()
 ```bash
 curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femotion"
 ```
-
-## Preparation
-
-## Exploration
-
-## Preprocessing
-
-## Distributed
 
 ## Model
 
