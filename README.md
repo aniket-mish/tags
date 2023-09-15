@@ -1,7 +1,7 @@
 # Discovery
 
 ## Design
-I'm building an ML service that discovers biomedical content and categorizes it. The motivation behind this side project is to learn about distributed ML patterns, MLOps, and LLMs.
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs.
 
 ## Setup
 
@@ -92,6 +92,10 @@ ray.cluster_resources()
 ## Systems
 
 ## Data
+
+```bash
+curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femotion"
+```
 
 ## Preparation
 
