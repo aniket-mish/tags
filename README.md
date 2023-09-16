@@ -107,12 +107,14 @@ curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femo
 
 ## References
 
-[1] https://madewithml.com
+[1] [Made With ML](https://madewithml.com)
 
-[2] https://medium.com/sage-ai/demystifying-the-process-of-building-a-ray-cluster-110c67914a99
+[2] [Demystifying the Process of Building a Ray Cluster](https://medium.com/sage-ai/demystifying-the-process-of-building-a-ray-cluster-110c67914a99)
 
-[3] https://medium.com/samsara-engineering/building-a-modern-machine-learning-platform-with-ray-eb0271f9cbcf
+[3] [Building a Modern Machine Learning Platform with Ray](https://medium.com/samsara-engineering/building-a-modern-machine-learning-platform-with-ray-eb0271f9cbcf)
 
-[4] https://maxpumperla.com/learning_ray/
+[4] [Learning Ray - Flexible Distributed Python for Machine Learning](https://maxpumperla.com/learning_ray/)
 
-[5] https://medium.com/pinterest-engineering/last-mile-data-processing-with-ray-629affbf34ff
+[5] [Last Mile Data Processing with Ray](https://medium.com/pinterest-engineering/last-mile-data-processing-with-ray-629affbf34ff)
+
+[6] [Distributed Machine Learning at Instacart](https://www.instacart.com/company/how-its-made/distributed-machine-learning-at-instacart/)
