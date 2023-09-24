@@ -13,14 +13,14 @@ I'm going to create our cluster by defining a computing configuration and an env
 
 **_Environment_**
 
-I'm using a mac and python 3.10 here. I'm using `pyenv` to easily switch between python versions.
+I'm using a Mac and python 3.10 here. I'm using `pyenv` to easily switch between Python versions.
 
 ```bash
 pyenv install 3.10.11 # install 
 pyenv global 3.10.11 # set default
 ```
 
-Once I have python version, I can create virtual environment to install the dependencies.
+Once I have Python version, I can create a virtual environment to install the dependencies.
 
 ```bash
 mkdir classification 
@@ -54,16 +54,23 @@ git checkout -b dev
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
 
-Now I'm going to install python packages that are required and add it to our `requirements.txt` file. You can find the requirements.txt here.
+Now I'm going to install the Python packages that are required and add them to our `requirements.txt` file. You can find the requirements.txt here.
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
+I will also install and update the pre-commit hooks.
+
+```bash
+pre-commit install
+pre-commit autoupdate
+```
+
 Now I can launch the jupyter notebook to develop our ML application
 
 ```bash
-jupyter lab notebooks/pubmed.ipynb
+jupyter lab notebooks/emotions.ipynb
 ```
 
 **_Ray_**
