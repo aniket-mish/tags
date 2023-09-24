@@ -75,7 +75,7 @@ jupyter lab notebooks/emotions.ipynb
 
 **_Ray_**
 
-I'm using Ray to scale and production-ize our ML application
+I'm using Ray to scale and productionize our ML application
 
 ```python
 import ray
