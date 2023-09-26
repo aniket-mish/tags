@@ -95,6 +95,7 @@ ray.cluster_resources()
 ## Systems
 
 <img width="1080" alt="image" src="https://github.com/aniket-mish/discovery/assets/71699313/a532af67-0fab-477b-91c2-200e27196b20">
+
 _CI/CD and automated ML pipeline_
 
 ## Data
