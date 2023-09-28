@@ -1,19 +1,20 @@
 # Discovery
 
 ## Design
-I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Streamlit as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
+
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Streamlit as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc. The idea about the project came to me when I saw Apple adding this feature to their health app. We have to log our emotions in the app and we can then monitor them. So I'm building an app where we can just journalize our thoughts and the app will then predict what's on your mind, how's your mood, and then maybe can recommend things (games, videos, etc.).
 
 ## Setup
 
 **_Clusters_**
 
-Now to do distributed ml, I need to have a cluster/group of machines so that I can effortlessly scale the workloads. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one of them is a head node that manages the cluster and it will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
+Now to do distributed ml, I need to have a cluster/group of machines to effortlessly scale the workloads. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one is a head node that manages the cluster and will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
 
 I'm going to create our cluster by defining a computing configuration and an environment.
 
 **_Environment_**
 
-I'm using a Mac and python 3.10 here. I'm using `pyenv` to easily switch between Python versions.
+I'm using a Mac and python 3.10 here. I'm using `pyenv` to switch between Python versions easily.
 
 ```bash
 pyenv install 3.10.11 # install 
@@ -48,8 +49,8 @@ I have created a repository in my GitHub account and cloned it
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
-git clone https://github.com/aniket-mish/discovery.git . 
-git remote set-url origin https://github.com/$GITHUB_USERNAME/discovery.git 
+git clone https://github.com/aniket-mish/emotions.git . 
+git remote set-url origin https://github.com/$GITHUB_USERNAME/emotions.git 
 git checkout -b dev 
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
@@ -95,13 +96,12 @@ ray.cluster_resources()
 ## Systems
 
 <img width="1080" alt="image" src="https://github.com/aniket-mish/discovery/assets/71699313/a532af67-0fab-477b-91c2-200e27196b20">
-
-_CI/CD and automated ML pipeline_
+CI/CD and automated ML pipeline
 
 ## Data
 
 ```bash
-curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femotion"
+curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femotion"s
 ```
 
 ## Model
