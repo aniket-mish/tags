@@ -76,7 +76,7 @@ jupyter lab notebooks/emotions.ipynb
 
 **_Ray_**
 
-I'm using Ray to scale and productionize our ML application
+I'm using Ray to scale and productionise our ML application
 
 ```python
 import ray
@@ -104,17 +104,45 @@ CI/CD and automated ML pipeline
 curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femotion"s
 ```
 
+Prepare
+Explore
+Preprocess
+Distributed Ingest
+
 ## Model
+
+Train
+Track
+Tune
+Evaluate
+Serve
 
 ## Developing
 
+Scripts
+CLI
+
 ## Utilities
+
+Logs
+Docs
+Pre-commit
 
 ## Testing
 
+Code - pytest
+Data - great expectations
+
 ## Reproducibility
 
+DVC, MLFlow
+
 ## Production
+
+Jobs - Ray, Grafana dashboards
+CICD - GitHub actions
+Monitoring - Grafana
+Data engineering - Airbyte, Dbt cloud
 
 ## References
 
