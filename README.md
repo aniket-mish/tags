@@ -1,5 +1,4 @@
 # Multiclass Classification
-#ray #distributed-systems #mlops #llms
 
 ## Design
 
