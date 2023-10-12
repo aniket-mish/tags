@@ -49,8 +49,8 @@ I have created a repository in my GitHub account and cloned it
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
-git clone https://github.com/aniket-mish/emotions.git . 
-git remote set-url origin https://github.com/$GITHUB_USERNAME/emotions.git 
+git clone https://github.com/aniket-mish/discovery.git . 
+git remote set-url origin https://github.com/$GITHUB_USERNAME/discovery.git 
 git checkout -b dev 
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
@@ -76,7 +76,7 @@ jupyter lab notebooks/emotions.ipynb
 
 **_Ray_**
 
-I'm using Ray to scale and productionise our ML application
+I'm using Ray to build the scalable ML application
 
 ```python
 import ray
