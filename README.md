@@ -100,8 +100,10 @@ CI/CD and automated ML pipeline
 
 ## Data
 
-```bash
-curl -X GET "https://datasets-server.huggingface.co/splits?dataset=dair-ai%2Femotion"s
+```python
+from datasets import load_dataset
+
+emotions_dataset = load_dataset("emotions", "simplified")
 ```
 
 Prepare
