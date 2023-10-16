@@ -14,14 +14,14 @@ I'm going to create our cluster by defining a computing configuration and an env
 
 **_Environment_**
 
-I'm using a Mac and python 3.10 here. I'm using `pyenv` to switch between Python versions easily.
+I'm using a Mac and Python 3.10 here. I'm using `pyenv` to create the virtual environments and switch between python versions easily.
 
 ```bash
 pyenv install 3.10.11 # install 
 pyenv global 3.10.11 # set default
 ```
 
-Once I have Python version, I can create a virtual environment to install the dependencies.
+Once I have the pyenv installed, I can create a virtual environment to install the dependencies.
 
 ```bash
 mkdir classification 
@@ -41,11 +41,11 @@ I'm doing this on my personal laptop and so my laptop will act as a cluster wher
 
 **_Workspace_**
 
-I'm using VS Code
+I'm using VS Code with GitHub Copilot 😆
 
 **_Git_**
 
-I have created a repository in my GitHub account and cloned it
+I have created a repository on GitHub
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
@@ -55,13 +55,13 @@ git checkout -b dev
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
 
-Now I'm going to install the Python packages that are required and add them to our `requirements.txt` file. You can find the requirements.txt here.
+Next, I clone the repo and install the necessary packages using our `requirements.txt` file.
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-I will also install and update the pre-commit hooks.
+I will also install and update the pre-commit hooks. I use pre-commit in every project I work on.
 
 ```bash
 pre-commit install
