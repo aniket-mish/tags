@@ -93,7 +93,7 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
-I am going to go through basics about Ray when I work on distributed systems part of the workflow.
+I will go through the basics about Ray when I work on the distributed systems part of the workflow.
 
 ## Systems
 
@@ -138,6 +138,7 @@ hf_dataset.set_format("pandas")
 train_df = hf_dataset["train"][:]
 ```
 
+#### Data Distribution
 
 ### Distributed Ingestion 
 
