@@ -100,16 +100,44 @@ CI/CD and automated ML pipeline
 
 ## Data
 
+### Data Ingestion
+
+I'm downloading the dataset from huggingface. You can download a raw (~211K rows) or simplified (~54K rows) subset of the dataset.
+
 ```python
 from datasets import load_dataset
 
-emotions_dataset = load_dataset("emotions", "simplified")
+hf_dataset = load_dataset("emotions", "simplified")
 ```
 
-Prepare
-Explore
-Preprocess
-Distributed Ingest
+You can see that the dataset splitting is done for us. If you check out the `hf_dataset`, you'll see the splits and the number of rows each split contains.
+
+```python
+DatasetDict({
+    train: Dataset({
+        features: ['text', 'labels', 'id'],
+        num_rows: 43410
+    })
+    validation: Dataset({
+        features: ['text', 'labels', 'id'],
+        num_rows: 5426
+    })
+    test: Dataset({
+        features: ['text', 'labels', 'id'],
+        num_rows: 5427
+    })
+})
+```
+
+To explore the dataset, you can convert the dataset to a pandas dataframe.
+
+```python
+hf_dataset.set_format("pandas")
+train_df = hf_dataset["train"][:]
+```
+
+
+### Distributed Ingestion 
 
 ## Model
 
