@@ -93,6 +93,8 @@ I can also view cluster resources
 ray.cluster_resources()
 ```
 
+I am going to go through basics about Ray when I work on distributed systems part of the workflow.
+
 ## Systems
 
 <img width="1080" alt="image" src="https://github.com/aniket-mish/discovery/assets/71699313/a532af67-0fab-477b-91c2-200e27196b20">
