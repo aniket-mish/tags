@@ -2,7 +2,7 @@
 
 ## Design
 
-I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Streamlit as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc. The idea about the project came to me when I saw Apple adding this feature to their health app. We have to log our emotions in the app and we can then monitor them. So I'm building an app where we can just journalize our thoughts and the app will then predict what's on your mind, how's your mood, and then maybe can recommend things (games, videos, etc.).
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Streamlit as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
 
 ## Setup
 
@@ -14,14 +14,14 @@ I'm going to create our cluster by defining a computing configuration and an env
 
 **_Environment_**
 
-I'm using a Mac and Python 3.10 here. I'm using `pyenv` to create the virtual environments and switch between python versions easily.
+I'm using a Mac and Python 3.10 here. I'm using `pyenv` to create the virtual environments and switch between Python versions easily.
 
 ```bash
 pyenv install 3.10.11 # install 
 pyenv global 3.10.11 # set default
 ```
 
-Once I have the pyenv installed, I can create a virtual environment to install the dependencies.
+Once the pyenv is installed, I can create a virtual environment to install the dependencies.
 
 ```bash
 mkdir classification 
