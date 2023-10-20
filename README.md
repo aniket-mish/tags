@@ -2,7 +2,7 @@
 
 ## Design
 
-I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Streamlit as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
 
 ## Setup
 
