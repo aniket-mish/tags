@@ -1,4 +1,4 @@
-# Discovery
+# Discovery (detecting emotions)
 
 ## Design
 
