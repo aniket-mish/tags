@@ -1,4 +1,4 @@
-# Discovery (detecting emotions)
+# e2e-mlops
 
 ## Design
 
