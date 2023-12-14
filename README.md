@@ -1,20 +1,20 @@
-# e2e-mlops
+# Dectecting Emotions
 
 ## Design
 
-I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ML patterns, Ray, MLOps, and LLMs. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ways of training and serving ML models, Ray framework, MLOps best practices, and LLMs 😜. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
 
 ## Setup
 
 **_Clusters_**
 
-Now to do distributed ml, I need to have a cluster/group of machines to effortlessly scale the workloads. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one is a head node that manages the cluster and will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
+To do distributed ML, I need to have a cluster/group of machines to scale the workloads effortlessly. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one is a head node that manages the cluster and will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
 
 I'm going to create our cluster by defining a computing configuration and an environment.
 
 **_Environment_**
 
-I'm using a Mac and Python 3.10 here. I'm using `pyenv` to create the virtual environments and switch between Python versions easily.
+I'm using a personal machine (Mac 💻) for this project but you can use any cloud platform. I'm using `pyenv` to create the virtual environments and switch between Python versions easily. To create a cluster on the cloud you'll need a yaml with all the configurations with a base image, env variables, etc.
 
 ```bash
 pyenv install 3.10.11 # install 
@@ -33,15 +33,15 @@ python3 -m pip install --upgrade pip setuptools wheel
 
 **_Compute_**
 
-I can define the compute configuration in the `cluster_compute.yaml`, which will specify the hardware dependencies that I'll need to execute workloads.
+I can define the compute configuration in the `cluster_compute.yaml`, which will specify the hardware dependencies I'll need to execute workloads.
 
 If you're using resources from the cloud computing platforms like AWS, you can define those configurations here such as region, instance_type, min_workers, max_workers, etc.
 
-I'm doing this on my personal laptop and so my laptop will act as a cluster where one CPU will be the head node and some of the remaining CPU will be the worker nodes.
+I'm doing this on my laptop and so my laptop will act as a cluster where one CPU will be the head node and some of the remaining CPU will be the worker nodes.
 
 **_Workspace_**
 
-I'm using VS Code with GitHub Copilot 😆
+I'm using VS Code. You can also develop your app in Jupyter Lab and then copy your code in the VS Code. I know Karpathy does this!
 
 **_Git_**
 
@@ -49,8 +49,8 @@ I have created a repository on GitHub
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
-git clone https://github.com/aniket-mish/discovery.git . 
-git remote set-url origin https://github.com/$GITHUB_USERNAME/discovery.git 
+git clone https://github.com/aniket-mish/e2e-mlops.git . 
+git remote set-url origin https://github.com/$GITHUB_USERNAME/e2e-mlops.git 
 git checkout -b dev 
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
@@ -61,7 +61,7 @@ Next, I clone the repo and install the necessary packages using our `requirement
 python3 -m pip install -r requirements.txt
 ```
 
-I will also install and update the pre-commit hooks. I use pre-commit in every project I work on.
+I will also install and update the pre-commit hooks. I use pre-commit in every project I work on. It 
 
 ```bash
 pre-commit install
