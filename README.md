@@ -104,32 +104,36 @@ CI/CD and automated ML pipeline
 
 ### Data Ingestion
 
-I'm downloading the dataset from huggingface. You can download a raw (~211K rows) or simplified (~54K rows) subset of the dataset.
+I'm downloading the dataset from huggingface.
 
 ```python
 from datasets import load_dataset
 
-hf_dataset = load_dataset("emotions", "simplified")
+hf_dataset = load_dataset("dair-ai/emotion")
 ```
 
-You can see that the dataset splitting is done for us. If you check out the `hf_dataset`, you'll see the splits and the number of rows each split contains.
+### Splitting
+
+We already have train, validation, and test splits. If you check out the `hf_dataset`, you'll see the splits and the number of rows each split contains.
 
 ```python
 DatasetDict({
     train: Dataset({
-        features: ['text', 'labels', 'id'],
-        num_rows: 43410
+        features: ['text', 'label'],
+        num_rows: 16000
     })
     validation: Dataset({
-        features: ['text', 'labels', 'id'],
-        num_rows: 5426
+        features: ['text', 'label'],
+        num_rows: 2000
     })
     test: Dataset({
-        features: ['text', 'labels', 'id'],
-        num_rows: 5427
+        features: ['text', 'label'],
+        num_rows: 2000
     })
 })
 ```
+
+### Exploration
 
 To explore the dataset, you can convert the dataset to a pandas dataframe.
 
@@ -138,7 +142,25 @@ hf_dataset.set_format("pandas")
 train_df = hf_dataset["train"][:]
 ```
 
-#### Data Distribution
+**_Data Distribution_**
+
+```python
+# Most common emotions
+all_labels = Counter(train_df.label)
+all_labels.most_common()
+
+
+[('joy', 5362),
+ ('sadness', 4666),
+ ('anger', 2159),
+ ('fear', 1937),
+ ('love', 1304),
+ ('surprise', 572)]
+```
+
+**_Preprocessing_**
+
+I am encoding our text labels into indices and vice versa. I am also using SentenceTransformers model to tokenize our text.
 
 ### Distributed Ingestion 
 
