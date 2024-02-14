@@ -1,4 +1,4 @@
-# Dectecting Emotions
+# Detecting Emotions
 
 ## Design
 
