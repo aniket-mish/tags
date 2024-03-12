@@ -1,18 +1,14 @@
 # Detecting Emotions
 
-## Design
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ways of training and serving ML models, Ray framework, MLOps best practices, and LLMs 😜. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc. 
 
-I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ways of training and serving ML models, Ray framework, MLOps best practices, and LLMs 😜. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc.
+Understanding distributed systems is one of the most important skills that a developer needs. I have previously worked on a project [Distributed ML System](https://github.com/aniket-mish/distributed-ml-system) in which I used Kubernetes to train, tune and serve the AI workloads. 
 
 ## Setup
 
-**_Clusters_**
-
-To do distributed ML, I need to have a cluster/group of machines to scale the workloads effortlessly. I'm using Ray here. I'll create a cluster using Ray. In this cluster, one is a head node that manages the cluster and will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
+To do distributed ML, I need to have a cluster/group of machines to scale the workloads effortlessly. I'm using Ray here. I will have to create a cluster. In this cluster, one is a head node that manages the cluster and will be connected to worker nodes that will execute workloads. We can then implement auto-scaling based on our application's computing needs.
 
 I'm going to create our cluster by defining a computing configuration and an environment.
-
-**_Environment_**
 
 I'm using a personal machine (Mac 💻) for this project but you can use any cloud platform. I'm using `pyenv` to create the virtual environments and switch between Python versions easily. To create a cluster on the cloud you'll need a yaml with all the configurations with a base image, env variables, etc.
 
@@ -39,13 +35,9 @@ If you're using resources from the cloud computing platforms like AWS, you can d
 
 I'm doing this on my laptop and so my laptop will act as a cluster where one CPU will be the head node and some of the remaining CPU will be the worker nodes.
 
-**_Workspace_**
-
 I'm using VS Code. You can also develop your app in Jupyter Lab and then copy your code in the VS Code. I know Karpathy does this!
 
-**_Git_**
-
-I have created a repository on GitHub
+I have created a repository on GitHub. I clone it.
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
@@ -55,20 +47,20 @@ git checkout -b dev
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
 
-Next, I clone the repo and install the necessary packages using our `requirements.txt` file.
+Next, I install the necessary packages using our `requirements.txt` file. I am just starting to develop this project so there are just the necessary packages (pandas, numpy, torch, transformers) required as dependencies.
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-I will also install and update the pre-commit hooks. I use pre-commit in every project I work on. It 
+I am a huge fan of `pre-commit` and I always install it when I am setting up a project. This is my go-to way of ensuring I do not commit bad things.
 
 ```bash
 pre-commit install
 pre-commit autoupdate
 ```
 
-Now I can launch the jupyter notebook to develop our ML application
+Let's launch a jupyter notebook to start experimenting.
 
 ```bash
 jupyter lab notebooks/emotions.ipynb
@@ -76,7 +68,7 @@ jupyter lab notebooks/emotions.ipynb
 
 **_Ray_**
 
-I'm using Ray to build the scalable ML application
+I'm using Ray to build the scalable ML application. Ray is a popular distributed computing framework. It can help with the scaling of very complex AI workloads like tuning, inference, model training, etc.
 
 ```python
 import ray
