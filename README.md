@@ -27,7 +27,7 @@ source venv/bin/activate
 python3 -m pip install --upgrade pip setuptools wheel
 ```
 
-**_Compute_**
+### Compute
 
 I can define the compute configuration in the `cluster_compute.yaml`, which will specify the hardware dependencies I'll need to execute workloads.
 
@@ -37,12 +37,12 @@ I'm doing this on my laptop and so my laptop will act as a cluster where one CPU
 
 I'm using VS Code. You can also develop your app in Jupyter Lab and then copy your code in the VS Code. I know Karpathy does this!
 
-I have created a repository on GitHub. I clone it.
+I have created a repository called as **emoai**(emotion AI😜) on github. Let's clone it on our local.
 
 ```bash
 export GITHUB_USERNAME="aniket-mish"
-git clone https://github.com/aniket-mish/e2e-mlops.git . 
-git remote set-url origin https://github.com/$GITHUB_USERNAME/e2e-mlops.git 
+git clone https://github.com/aniket-mish/emoai.git . 
+git remote set-url origin https://github.com/$GITHUB_USERNAME/emoai.git 
 git checkout -b dev 
 export PYTHONPATH=$PYTHONPATH:$PWD
 ```
@@ -66,7 +66,7 @@ Let's launch a jupyter notebook to start experimenting.
 jupyter lab notebooks/emotions.ipynb
 ```
 
-**_Ray_**
+### Ray
 
 I'm using Ray to build the scalable ML application. Ray is a popular distributed computing framework. It can help with the scaling of very complex AI workloads like tuning, inference, model training, etc.
 
@@ -89,12 +89,11 @@ I will go through the basics about Ray when I work on the distributed systems pa
 
 ## Systems
 
+This is a typical setup of pipelines with mature MLOps practices. Read about it [here](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning).
+
 <img width="1080" alt="image" src="https://github.com/aniket-mish/discovery/assets/71699313/a532af67-0fab-477b-91c2-200e27196b20">
-CI/CD and automated ML pipeline
 
-## Data
-
-### Data Ingestion
+## Data Ingestion
 
 I'm downloading the dataset from huggingface.
 
@@ -104,7 +103,7 @@ from datasets import load_dataset
 hf_dataset = load_dataset("dair-ai/emotion")
 ```
 
-### Splitting
+## Splitting
 
 We already have train, validation, and test splits. If you check out the `hf_dataset`, you'll see the splits and the number of rows each split contains.
 
@@ -125,16 +124,16 @@ DatasetDict({
 })
 ```
 
-### Exploration
+## Exploration
 
-To explore the dataset, you can convert the dataset to a pandas dataframe.
+To explore the dataset, you can convert the dataset to a pandas dataframe (if it's a huge dataset, you can use polars).
 
 ```python
 hf_dataset.set_format("pandas")
 train_df = hf_dataset["train"][:]
 ```
 
-**_Data Distribution_**
+### Data Distribution
 
 ```python
 # Most common emotions
@@ -150,57 +149,6 @@ all_labels.most_common()
  ('surprise', 572)]
 ```
 
-**_Preprocessing_**
+### Preprocessing
 
 I am encoding our text labels into indices and vice versa. I am also using SentenceTransformers model to tokenize our text.
-
-### Distributed Ingestion 
-
-## Model
-
-Train
-Track
-Tune
-Evaluate
-Serve
-
-## Developing
-
-Scripts
-CLI
-
-## Utilities
-
-Logs
-Docs
-Pre-commit
-
-## Testing
-
-Code - pytest
-Data - great expectations
-
-## Reproducibility
-
-DVC, MLFlow
-
-## Production
-
-Jobs - Ray, Grafana dashboards
-CICD - GitHub actions
-Monitoring - Grafana
-Data engineering - Airbyte, Dbt cloud
-
-## References
-
-[1] [Made With ML](https://madewithml.com)
-
-[2] [Demystifying the Process of Building a Ray Cluster](https://medium.com/sage-ai/demystifying-the-process-of-building-a-ray-cluster-110c67914a99)
-
-[3] [Building a Modern Machine Learning Platform with Ray](https://medium.com/samsara-engineering/building-a-modern-machine-learning-platform-with-ray-eb0271f9cbcf)
-
-[4] [Learning Ray - Flexible Distributed Python for Machine Learning](https://maxpumperla.com/learning_ray/)
-
-[5] [Last Mile Data Processing with Ray](https://medium.com/pinterest-engineering/last-mile-data-processing-with-ray-629affbf34ff)
-
-[6] [Distributed Machine Learning at Instacart](https://www.instacart.com/company/how-its-made/distributed-machine-learning-at-instacart/)
