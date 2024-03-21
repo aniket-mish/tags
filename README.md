@@ -1,6 +1,6 @@
 # Emoai is an AI system that detects emotions from the text
 
-I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ways of training and serving ML models, Ray framework, MLOps best practices, and LLMs 😜. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc. 
+I'm building an ML service that detects emotions. The motivation behind this project is to learn about distributed ways of training and serving ML models, Ray framework, MLOps best practices, and LLMs. I'm using Gradio as a frontend framework, FastAPI for building APIs, MLFlow for experiment tracking, etc. 
 
 Understanding distributed systems is one of the most important skills that a developer needs. I have previously worked on a project [Distributed ML System](https://github.com/aniket-mish/distributed-ml-system) in which I used Kubernetes to train, tune and serve the AI workloads. 
 
